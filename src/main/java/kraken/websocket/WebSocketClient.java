@@ -5,7 +5,6 @@ import java.net.http.HttpClient;
 import java.net.http.WebSocket;
 
 public class WebSocketClient {
-//\"BTC/USD\",
 	public WebSocketClient() {
 		String webSocketURL = "wss://ws.kraken.com/v2";
 		String subscriptionMsg = "{\"method\": \"subscribe\",\"params\": {\"channel\": \"book\",\"symbol\": [\"ETH/USD\", \"BTC/USD\"]}}";

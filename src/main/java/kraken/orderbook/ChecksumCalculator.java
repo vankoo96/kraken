@@ -1,4 +1,4 @@
-package kraken.websocket;
+package kraken.orderbook;
 
 import java.util.zip.CRC32;
 
@@ -14,7 +14,7 @@ public class ChecksumCalculator {
 	 */
 	public static Long calculate(Book book) {
 		StringBuilder builder = new StringBuilder();
-		book.getAsks().reversed().forEach(a -> {
+		book.getAsks().forEach(a -> {
 			builder.append(removeLeadingZerosAndPoints(a.getPrice().toString())
 					+ removeLeadingZerosAndPoints(a.getQty().toString()));
 		});
